@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accounting</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+
+<form accept-charset="UTF-8" action="/invoice_calculator" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label for="state">State</label>
+  <select id="state" name="state"><option value="FL">FL</option>
+<option value="CA">CA</option></select>
+  <label for="subtotal">Subtotal</label>
+  <input id="subtotal" name="subtotal" type="text" />
+  <button name="button" type="submit">Submit</button>
+</form>
+<div id='#sales_tax'>
+  $10.00
+</div>
+
+
+</body>
+</html>

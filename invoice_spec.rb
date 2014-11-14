@@ -11,24 +11,29 @@ describe Invoice do
   end
 
   describe '#sales_tax' do
-    xit 'is 10% in California' do
+    it 'is 10% in California' do
       expect(invoice.sales_tax).to eq 10
     end
 
-    xit 'is 7% in Florida' do
+    it 'is 7% in Florida' do
       invoice.state = 'FL'
       expect(invoice.sales_tax).to eq 7
+    end
+
+    it 'is a dollar amount' do
+      invoice.subtotal = 200
+      expect(invoice.sales_tax).to eq 20
     end
   end
 
   describe '#service_fee' do
-    xit 'is 20%' do
+    it 'is 20%' do
       expect(invoice.service_fee).to eq 25
     end
   end
 
   describe '#total' do
-    xit 'includes sales tax and service fee' do
+    it 'includes sales tax and service fee' do
       expect(invoice.total).to eq 135
     end
   end
